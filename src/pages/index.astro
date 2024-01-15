@@ -1,0 +1,156 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import RecentPost from "../components/RecentPost.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import "@fontsource/dm-serif-display";
+import "@fontsource/dm-sans/400.css";
+import "@fontsource/dm-sans/600.css";
+import Me from "../components/Me.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <header>
+        <h1>Arjmath blog</h1>
+      </header>
+      <section class="main">
+        <article id="l-article">
+          <h3>Hola Soy <span class="yellow-gradient"> José Arjona</span></h3>
+        </article>
+        <div class="ïmg">
+          <Me />
+        </div>
+        <article id="r-article">
+          <h3>Bienvenido a <span class="green-gradient"> mi blog</span></h3>
+        </article>
+      </section>
+      <section>
+        <a href="./blog" id="call-to-action">Ir al blog</a>
+      </section>
+      <section class="recent">
+        <h2 class="golden-gradient">Post Recientes</h2>
+        <RecentPost />
+      </section>
+    </main>
+    <!-- <Footer /> -->
+    <style>
+      header,
+      section,
+      article {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      header {
+        margin-bottom: 5em;
+      }
+      header h1 {
+        text-align: center;
+        font-style: italic;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-weight: normal;
+      }
+
+      #call-to-action {
+        font-family: "DM Sans", system-ui, sans-serif !important;
+        font-style: bold;
+        padding-left: 33px;
+        padding-right: 33px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-radius: 9px;
+        border: 1px solid #3ebe81;
+        /*  background:; */
+        font-family: inherit;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--color-text);
+        transition: 0.4s;
+        margin-bottom: 3em;
+      }
+
+      #call-to-action:hover {
+        box-shadow: 7px 5px 56px -14px #c3d900;
+        background: #3ebe81;
+      }
+      #call-to-action:active {
+        transform: scale(0.97);
+        box-shadow: 7px 5px 56px -10px #c3d900;
+      }
+
+      .main {
+        flex-direction: row;
+        gap: 15px;
+        margin-bottom: 3em;
+      }
+
+      .yellow-gradient {
+        background: linear-gradient(172deg, #e7d37c 61.47%, #ebf650 102.15%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .green-gradient {
+        background: linear-gradient(
+          165deg,
+          #48e965 8.06%,
+          rgba(39, 255, 216, 0) 152.48%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .golden-gradient {
+        background: linear-gradient(
+          180deg,
+          #e7d37c 0%,
+          rgba(254, 254, 254, 0) 187.65%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      #r-article {
+        text-align: right;
+        text-wrap: balance;
+      }
+
+      #l-article {
+        text-align: left;
+        text-wrap: balance;
+      }
+
+      .img {
+        margin: 10px;
+      }
+
+      @media (width <= 768px) {
+        /*     header,section, article {
+      flex-wrap: wrap;
+    } */
+        .main {
+          flex-direction: column;
+        }
+        .recent {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </body>
+</html>

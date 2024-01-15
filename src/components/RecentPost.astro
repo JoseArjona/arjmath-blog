@@ -1,0 +1,111 @@
+<div class="recent-post">
+  <a href="#" class="card">
+    <figure>
+      <h3>A</h3>
+      <img
+        src="https://images.pexels.com/photos/5107839/pexels-photo-5107839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="a"
+      />
+    </figure>
+  </a>
+  <a href="#" class="card">
+    <figure>
+      <h3>A</h3>
+      <img
+        src="https://images.pexels.com/photos/5107839/pexels-photo-5107839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="a"
+      />
+    </figure>
+  </a>
+  <a href="#" class="card">
+    <figure>
+      <h3>A</h3>
+      <img
+        src="https://images.pexels.com/photos/5107839/pexels-photo-5107839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="a"
+      />
+    </figure>
+  </a>
+  <a href="#" class="card">
+    <figure>
+      <h3>A</h3>
+      <img
+        src="https://images.pexels.com/photos/5107839/pexels-photo-5107839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="a"
+      />
+    </figure>
+  </a>
+</div>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .recent-post {
+    display: flex;
+    gap: 1rem;
+    max-width: 80rem;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    position: relative;
+    left: 0px;
+    width: 6rem;
+    border-radius: 1.2rem;
+    height: 20rem;
+    overflow: hidden;
+    background-color: transparent;
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+    flex: 0.25;
+  }
+
+  .card figure img {
+    position: relative;
+    height: 20rem;
+    object-fit: cover;
+    transition: 0.4s ease-in-out;
+  }
+
+  .card figure h3 {
+    position: absolute;
+    bottom: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    margin: 0;
+    color: white; /* Ajusta el color del texto según sea necesario */
+  }
+
+  .card:hover {
+    flex: 2;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 1rem;
+  }
+
+  .card:hover img {
+    object-fit: cover;
+    width: 100%;
+    filter: brightness(70%);
+  }
+
+  /* .car:nth-child(1) img {
+    left: -8rem;
+  }
+
+  .car:nth-child(2) img {
+    left: -6rem;
+  }
+
+  .car:nth-child(3) img {
+    left: -14rem;
+  }
+
+  .car:nth-child(4) img {
+    left: -8rem;
+  } */
+</style>
