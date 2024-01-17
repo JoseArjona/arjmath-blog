@@ -8,6 +8,7 @@ import "@fontsource/dm-serif-display";
 import "@fontsource/dm-sans/400.css";
 import "@fontsource/dm-sans/600.css";
 import GitCard from "../components/GitCard.astro";
+import SubLink from "../components/SubLink.astro";
 type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
@@ -106,6 +107,17 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       </article>
       <footer class="gitcard"><GitCard /></footer>
     </main>
+    <nav class="footer-nav">
+      <SubLink href="/blog">Ver más artículos</SubLink>
+    </nav>
+
     <Footer />
+    <style>
+      .footer-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
   </body>
 </html>
