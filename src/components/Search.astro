@@ -1,0 +1,112 @@
+<div class="group">
+  <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+    <g>
+      <path
+        d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"
+      ></path>
+    </g>
+  </svg>
+  <input id="searchBox" class="input" type="search" placeholder="Search" />
+</div>
+
+<p id="infoSearch">Mostrando Todos los Resultados.</p>
+
+<script>
+  const searchBox = document.querySelector("#searchBox");
+  searchBox.addEventListener("keyup", () => {
+    let input, filter, ul, li, postTitles, i;
+    input = document.getElementById("searchBox");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("posts");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+      postTitles = li[i].getElementsByTagName("h4")[0];
+      if (postTitles) {
+        let palabrasEnFiltro = filter.split("");
+        let hallado = 0;
+        for (let filtro of palabrasEnFiltro) {
+          if (postTitles.innerHTML.toUpperCase().indexOf(filtro) > -1) {
+            hallado++;
+          }
+        }
+        if (hallado === palabrasEnFiltro.length) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+        // si todos los li tienen display none, mostrar mensaje
+        let liOcultos = true;
+
+        for (let allCards of li) {
+          if (allCards.style.display !== "none") {
+            liOcultos = false;
+          }
+        }
+        const element = Array.from(li);
+        const hiddenDiv = element.filter(
+          (element: { style: { display: string } }) =>
+            element.style.display !== "none"
+        );
+        const totalDiv = hiddenDiv.length;
+        const infoSearch = document.querySelector("#infoSearch");
+        liOcultos == true
+          ? (infoSearch.textContent = "No hay resultados")
+          : (infoSearch.textContent = `Mostrando ${totalDiv} de ${li.length} resultados`);
+      } else {
+        console.log("no hay titulos");
+      }
+    }
+  });
+</script>
+
+<style>
+  .group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .input {
+    height: 40px;
+    line-height: 28px;
+    font-family:
+      "Dm Sans",
+      system-ui,
+      -apple-system,
+      sans-serif;
+    padding: 0 1rem;
+    width: 100%;
+    padding-left: 2.5rem;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    transition: 0.3s ease;
+    border: 2px solid;
+    border-image: conic-gradient(#00f260, #0575e6, #64f38c) 1;
+  }
+
+  .input::placeholder {
+    color: #fff;
+  }
+
+  .input:focus::placeholder {
+    color: #999;
+  }
+
+  .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #fff;
+    width: 1rem;
+    height: 1rem;
+  }
+  p {
+    text-align: center;
+    color: #b3b3b3;
+  }
+</style>
