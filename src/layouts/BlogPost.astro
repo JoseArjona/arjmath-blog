@@ -11,10 +11,11 @@ import GitCard from "../components/GitCard.astro";
 import SubLink from "../components/SubLink.astro";
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, heroImageAlt } =
+  Astro.props;
 ---
 
-<html lang="en">
+<html lang="es">
   <head>
     <BaseHead title={title} description={description} />
     <style>
@@ -80,13 +81,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <Header />
     <main class="blog-main">
       <article>
-        <div class="hero-image">
+        <header class="hero-image">
           {
             heroImage && (
-              <img width={1020} height={510} src={heroImage} alt="" />
+              <img
+                width={1020}
+                height={510}
+                src={heroImage}
+                alt={heroImageAlt}
+              />
             )
           }
-        </div>
+        </header>
         <div class="prose">
           <div class="title">
             <div class="date">

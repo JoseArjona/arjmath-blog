@@ -1,41 +1,33 @@
-<div class="recent-post">
-  <a href="#" class="card">
-    <figure>
-      <h3>A</h3>
-      <img
-        src="https://images.pexels.com/photos/5107839/pexels-photo-5107839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="a"
-      />
-    </figure>
-  </a>
-  <a href="#" class="card">
-    <figure>
-      <h3>A</h3>
-      <img
-        src="https://images.pexels.com/photos/5107839/pexels-photo-5107839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="a"
-      />
-    </figure>
-  </a>
-  <a href="#" class="card">
-    <figure>
-      <h3>A</h3>
-      <img
-        src="https://images.pexels.com/photos/5107839/pexels-photo-5107839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="a"
-      />
-    </figure>
-  </a>
-  <a href="#" class="card">
-    <figure>
-      <h3>A</h3>
-      <img
-        src="https://images.pexels.com/photos/5107839/pexels-photo-5107839.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="a"
-      />
-    </figure>
-  </a>
-</div>
+---
+import { getCollection } from "astro:content";
+
+async function getRecentPosts() {
+  const posts = await getCollection("blog");
+  const sortedPosts = posts.sort(
+    (a, b) =>
+      new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+  );
+ const filterPosts = sortedPosts.slice(0, 4);
+ return filterPosts
+}
+
+const recentPosts = await getRecentPosts()
+
+---
+
+<section class="recent-post">
+  {
+    recentPosts.map((post) => (
+      <a href=`/blog/${post.slug}` class="card" >
+        <figure>
+          <h3>{post.data.title}</h3>
+          <img src={post.data.heroImage} alt={post.data.heroImageAlt} />
+        </figure>
+      </a>
+    ))
+  }
+
+</section>
 
 <style>
   * {
@@ -72,12 +64,16 @@
 
   .card figure h3 {
     position: absolute;
+    font-size: 22px;
     bottom: 45%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
     margin: 0;
-    color: white; /* Ajusta el color del texto según sea necesario */
+    color: white; 
+    display: none;
+    transition: all 2s ease-in;
+    text-wrap: pretty;
   }
 
   .card:hover {
@@ -87,10 +83,14 @@
     border-radius: 1rem;
   }
 
+  .card:hover h3{
+   display: block !important;
+  }
+
   .card:hover img {
     object-fit: cover;
     width: 100%;
-    filter: brightness(70%);
+    filter: brightness(20%);
   }
 
   /* .car:nth-child(1) img {
