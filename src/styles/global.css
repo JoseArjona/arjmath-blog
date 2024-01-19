@@ -20,16 +20,16 @@
 }
 
 ::-webkit-scrollbar-thumb {
+	/* Color de la barra de desplazamiento */
 	background-color: #e4b92b;
-	/* Color del botón de desplazamiento */
 	border-radius: 6px;
 	/* Bordes redondeados del botón de desplazamiento */
 }
 
 
 ::-webkit-scrollbar-track {
-	background-color: #191720;
 	/* Color de fondo de la barra de desplazamiento */
+	background-color: #191720;
 }
 
 html {
