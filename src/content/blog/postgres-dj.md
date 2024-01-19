@@ -26,11 +26,11 @@ Para crear un Usuario en PostgreSQL desde pgAdmin debemos:
 
 2.- Dentro ubicar `Login/Group Roles`, darle clic derecho y en `create` `Login/Group Role`.
 
-3.- En la ventana emergente escribir en la pestaña `general` el name (este sera el usuario) y en la pestaña `Definition` en el campo `password` escribir la constaseña despues en la pestaña `Privileges` activar los permisos que desea en este caso activaremos todos (asi sera un superusuario).
+3.- En la ventana emergente escribir en la pestaña `general` el name (este sera el usuario) y en la pestaña `Definition` en el campo `password` escribir la contraseña después en la pestaña `Privileges` activar los permisos que desea en este caso activaremos todos (asi sera un superusuario).
 
 ## Crear una base de datos en PostgreSQL
 
-Para crear una base de datos en PostgreSQL desde pgAdmin debemos darle clic derecho a `Database` dentro de nuestro servidor de PostgreSQL, despues create `database`.
+Para crear una base de datos en PostgreSQL desde pgAdmin debemos darle clic derecho a `Database` dentro de nuestro servidor de PostgreSQL, después create `database`.
 
 ## Configuración en Django
 
