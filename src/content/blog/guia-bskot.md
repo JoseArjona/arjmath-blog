@@ -1,14 +1,13 @@
 ---
-layout: "../../layouts/BlogPost.astro"
-title: "Guia Basica de Kotlin "
-description: "Guia Básica del lenguaje de programacion Kotlin, las bases para iniciar en el lenguaje."
+title: "Guía Básica de Kotlin "
+description: "Guía Básica del lenguaje de programación Kotlin, las bases para iniciar en el lenguaje."
 autor: "Jose Arjona"
 pubDate: "03 Jan 2023"
 heroImage: "https://th.bing.com/th/id/R.ae78f82cfaa0015ef0ed01092b9dddf8?rik=11zQQB1HKlS7cQ&riu=http%3a%2f%2fruaa.me%2fcontent%2fimages%2f2019%2f10%2fkotlin-cover.jpg&ehk=6MPzRF2jk9Pi9vOOOvYRNWDONuZKzoO2zg7eTZK%2bz2Y%3d&risl=&pid=ImgRaw&r=0"
 heroImageAlt: "kotlin design"
 ---
 
-Kotlin es un lenguaje de programación de propósito general que se ejecuta en la máquina virtual de Java y también se puede compilar en el código fuente de JavaScript o usar la infraestructura del compilador LLVM. Si buscas un lenguaje moderno y sobre todo para el desarrollo android, kotlin es la mejor opcion. En esta guia basica aprenderas lo basico del lenguaje.
+Kotlin es un lenguaje de programación de propósito general que se ejecuta en la máquina virtual de Java y también se puede compilar en el código fuente de JavaScript o usar la infraestructura del compilador LLVM. Si buscas un lenguaje moderno y sobre todo para el desarrollo android, Kotlin es la mejor opción. En esta Guía Básica aprenderás lo básico del lenguaje.
 
 ## Variables y Constantes
 
@@ -34,13 +33,13 @@ Los tipos de datos son fundamentales para la programación. Se utilizan para alm
 
 ```kotlin
 val cadena = "Strings"
-// podemos ser explicitos al declarar usando ':'+el tipo de dato
+// podemos ser explícitos al declarar usando ':'+el tipo de dato
 val cadena2: String = "Cadenas"
-//println nos sirve para mostrar el mensaje en consola el simbolo '+' para unir los strings
+//println nos sirve para mostrar el mensaje en consola el símbolo '+' para unir los strings
 println(cadena + cadena2)
 ```
 
-🔹**Enteros** (Byte, Short, Int, Long) son los numeros enteros.
+🔹**Enteros** (Byte, Short, Int, Long) son los números enteros.
 
 ```kotlin
 val num1 = 12
@@ -49,7 +48,7 @@ val res = num1 + num2;
 println(res)
 ```
 
-🔹**Decimales** (Float, Double) son numeros que contienen decimales
+🔹**Decimales** (Float, Double) son números que contienen decimales
 
 ```kotlin
 val float = 12.4f
@@ -68,9 +67,9 @@ println(booleano == bool2) // compara si son iguales_ retorna falso
 
 ## Operadores Principales
 
-### Operadores condicionales y logicos
+### Operadores condicionales y lógicos
 
-| Simbolo | Descripción       |
+| símbolo | Descripción       |
 | :------ | :---------------- |
 | >       | Mayor que         |
 | >=      | Mayor o igual que |
@@ -82,17 +81,17 @@ println(booleano == bool2) // compara si son iguales_ retorna falso
 | \|\|    | Operador 'o'      |
 | !       | Negar             |
 
-### Operadores aritmeticos
+### Operadores aritméticos
 
-| Simbolo | Descripción                                             |
+| símbolo | Descripción                                             |
 | :------ | :------------------------------------------------------ |
 | +       | Suma: suma dos valores                                  |
 | -       | Resta: resta dos valores                                |
 | /       | Division: divide dos valores                            |
-| \*      | Multiplicacion: multiplica dos valores                  |
+| \*      | Multiplicación: multiplica dos valores                  |
 | %       | Modulo: devuelve el resto de la division de dos valores |
 | ++      | Incremento: incrementa en 1 el valor                    |
-| --      | Decremento: decrementa en 1 el valor                    |
+| --      | Decremento: disminuye en 1 el valor                     |
 | \*\*    | Exponente: eleva un valor a la potencia de otro valor   |
 
 ## Condicionales
@@ -125,9 +124,9 @@ if (age == 65 || age >= 18) {
 // else if nos ayuda a evaluar más condicionales
 if (age >= 18 && age < 65) {
     println("Mayor de edad")
-} else if (age >= 65) {  // si la condicion anterior no se cumple y esta si
+} else if (age >= 65) {  // si la condición anterior no se cumple y esta si
     println("Eres una persona de la tercera edad")
-    //NOTA: se pueden agregar varior else if
+    //NOTA: se pueden agregar varios else if
 } else { // si ninguna de las operaciones anteriores se cumple
     println("Eres menor de edad")
 }
@@ -140,9 +139,9 @@ La declaración when en Kotlin (en otros lenguajes switch) se usa para especific
 ```kotlin
 val country = "México"
 when (country) {
-  //evaluamos una condicion
+  //evaluamos una condición
   "Francia" -> {
-          // si se cumple ira esta condicion
+          // si se cumple ira esta condición
           println("habla Frances")
   }
   "EUUA" -> {
@@ -151,7 +150,7 @@ when (country) {
   "Portugal" -> {
           println("habla Portugues")
   }
-  // podemos seperar con comas si tenemos varias opciones que cumples un mismo objetivo
+  // podemos separar con comas si tenemos varias opciones que cumples un mismo objetivo
   "México", "España", "LATAM" -> {
       println("habla Español")
   }
@@ -197,10 +196,10 @@ val fruits = arrayListOf<String>()
 fruits.add("Fresa")
 fruits.add("Mango")
 println(fruits)
-// si queremos añdir un conjunto de datos usaderemos .addAll y listOf para crear una lista
+// si queremos añadir un conjunto de datos usaremos .addAll y listOf para crear una lista
 fruits.addAll(listOf("Aguacate", "Pera", "Sandia", "Uva"))
 println(fruits)
-// para poder acceder a los datos dentro del arrgelo usaremos la posicion, NOTA: las posicioneempiezan desde 0
+// para poder acceder a los datos dentro del arreglo usaremos la posición, NOTA: las posicione empiezan desde 0
 val strawberry = fruits[0]
 val grapes = fruits[5]
 println("Frutas pequeñas $strawberry y $grapes")
@@ -209,11 +208,11 @@ fruits.removeAt(3)
 println(fruits)
 // recorrer arreglos/ pasar por cada valor
 fruits.forEach {
-    println(it) // it: es el iterador va tomar como valor la posicion por cada elemento
+    println(it) // it: es el iterador va tomar como valor la posición por cada elemento
 }
 // para saber la cantidad de elementos de nuestro array usaremos count
 println("Total de frutas: " + fruits.count())
-// podemos acceder de forma rapida al primer y utlimo elemento con
+// podemos acceder de forma rápida al primer y ultimo elemento con
 println(fruits.first())
 println(fruits.last())
 // vaciar el array
@@ -235,7 +234,7 @@ println(names)
 names = mutableMapOf(1 to "Juan", 4 to "Pedro")
 // añadir un elemento
 names[2] = "Alex"
-// tambien podemos usar put
+// también podemos usar put
 names.put(3, "Alicia")
 println(names)
 // las claves no se pueden repetir es decir no podemos hacer esto para añadir
@@ -322,7 +321,7 @@ do {
 
 ## Null Safety
 
-Seguridad contra nulos, nos ayuda a evitar errores de ejecucion por variables nulas
+Seguridad contra nulos, nos ayuda a evitar errores de ejecución por variables nulas
 
 ```kotlin
 val string = "Hola mundo"
@@ -334,35 +333,35 @@ var nullString: String? = "Hola null safety"
 nullString = null
 println(nullString)
 // Safe Call
-// El simbolo ? nos ayuda en caso de ser nulo, no ejecutara esta operacion
+// El símbolo ? nos ayuda en caso de ser nulo, no ejecutara esta operación
 println(nullString?.length)
 
 ```
 
 ## Funciones
 
-Funcionaes, nos permiten reutilizar partes del codigo; son partes de codigo que hacen un tarea espeficifica. Estas pueden transmitir como si fueran datos.También se pueden anidar dentro de otras funciones o clases.
+Funciones, nos permiten reutilizar partes del código; son partes de código que hacen un tarea especifica. Estas pueden transmitir como si fueran datos.También se pueden anidar dentro de otras funciones o clases.
 
 ```kotlin
-// palabra reservada fun + el nombre de la funcion () {}
+// palabra reservada fun + el nombre de la función () {}
 fun funciones() {
-    // aqui ira el codigo.
+    // aquí ira el código.
     // para llamarlas se usa lo siguiente nombreFuncion()
-    // estamos llamando una funcion que se declara más abajo
+    // estamos llamando una función que se declara más abajo
     sayHello()
-    // estamos llamando una funcion que recibe un parametro
+    // estamos llamando una función que recibe un parámetro
     sayName("Juan")
-    // estamos llamando una funcion que retorna un valor para poder almacenarlo
+    // estamos llamando una función que retorna un valor para poder almacenarlo
     val sumRes: Int = sum(12, 12)
     println(sumRes)
     // podemos usar varias veces las funciones
     println(sum(12, sum(13, 12)))
 }
-// funcion simple
+// función simple
 fun sayHello() {
     println("Hola")
 }
-//funcion con parametros, estas nos permiten reutilizar codigo y tener resultado dititos.
+//función con parámetros, estas nos permiten reutilizar código y tener resultado dígitos.
 fun sayName(name: String) {
     println("Hola $name ")
 }

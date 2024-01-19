@@ -1,7 +1,7 @@
 ---
-title: "Guia Basica Github"
+title: "Guía Básica Github"
 autor: "Jose Arjona"
-description: "Guia basica y Comandos Basicos Github"
+description: "Guía Básica y Comandos Basicos Github"
 pubDate: "05 Nov 2022"
 heroImage: "https://myblogtime.com/wp-content/uploads/2020/08/Git-hub-1.png"
 heroImageAlt: "GitHub logo"
