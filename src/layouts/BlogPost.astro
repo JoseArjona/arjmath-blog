@@ -9,6 +9,8 @@ import "@fontsource/dm-sans/400.css";
 import "@fontsource/dm-sans/600.css";
 import GitCard from "../components/GitCard.astro";
 import SubLink from "../components/SubLink.astro";
+import { ViewTransitions } from "astro:transitions";
+
 type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, updatedDate, heroImage, heroImageAlt } =
@@ -17,6 +19,7 @@ const { title, description, pubDate, updatedDate, heroImage, heroImageAlt } =
 
 <html lang="es">
   <head>
+    <ViewTransitions />
     <BaseHead title={title} description={description} />
     <style>
       body {

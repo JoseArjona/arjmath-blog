@@ -7,18 +7,21 @@ import "@fontsource/dm-serif-display";
 import "@fontsource/dm-sans/400.css";
 import "@fontsource/dm-sans/600.css";
 import Me from "../components/Me.astro";
+import Footer from "../components/Footer.astro";
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
 <html lang="es">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <ViewTransitions />
   </head>
   <body>
     <Header title={SITE_TITLE} />
     <main>
       <header>
-        <h1>Arjmath blog</h1>
+        <h1 transition:animate="fade">Arjmath blog</h1>
       </header>
       <section class="main">
         <article id="l-article">
@@ -39,7 +42,7 @@ import Me from "../components/Me.astro";
         <RecentPost />
       </section>
     </main>
-    <!-- <Footer /> -->
+    <Footer />
     <style>
       header,
       section,
