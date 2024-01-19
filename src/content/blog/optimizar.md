@@ -16,9 +16,11 @@ Una de las principales causas de una página web lenta son las imágenes grandes
 <img src="mi-imagen.jpg" alt="Descripción de la imagen" loading="lazy" />
 ```
 
+> Importante asegúrate que sean imágenes que no requieras cargar de inmediato
+
 ## 2. Aprovecha el atributo "decoding" para acelerar la decodificación de imágenes
 
-Otra forma de optimizar tus imágenes es utilizando el atributo `decoding="async"`. Esto le indica al navegador que decodifique la imagen de forma asíncrona, lo que permite que el proceso de carga de la página no se detenga mientras se decodifica la imagen. Como resultado, los usuarios podrán interactuar con tu sitio mucho más rápido. _Complementalo con el atributo **loading** y tendras mejores resultados._
+Otra forma de optimizar tus imágenes es utilizando el atributo `decoding="async"`. Esto le indica al navegador que decodifique la imagen de forma asíncrona, lo que permite que el proceso de carga de la página no se detenga mientras se decodifica la imagen. Como resultado, los usuarios podrán interactuar con tu sitio mucho más rápido. _Complementado con el atributo **loading** y tendrás mejores resultados._
 
 ```html
 <img
@@ -28,6 +30,8 @@ Otra forma de optimizar tus imágenes es utilizando el atributo `decoding="async
   decoding="async"
 />
 ```
+
+> Importante asegúrate que sean imágenes que no requieras cargar de inmediato
 
 ## 3. Minimiza y combina tus archivos CSS y JavaScript
 
@@ -48,9 +52,9 @@ Algunos minificadores :
 
 Implementar el almacenamiento en caché es una excelente manera de optimizar tu sitio web. Al configurar correctamente las cabeceras de caché en tu servidor, permites que los archivos se almacenen en la memoria caché del navegador de los usuarios. Esto significa que cuando un usuario vuelva a visitar tu sitio, los archivos estáticos no tendrán que descargarse nuevamente, lo que acelerará la carga de la página.
 
-## 5. Optimiza tu código y consulta la herramienta de PageSpeed Insights
+## 5. Consulta la herramienta de PageSpeed Insights
 
-Asegúrate de que tu código esté bien optimizado y cumpla con las mejores prácticas de rendimiento. Puedes utilizar herramientas como PageSpeed Insights de Google para evaluar y obtener sugerencias específicas sobre cómo mejorar la velocidad de carga de tu sitio web. ¡No dudes en aprovechar esta valiosa herramienta gratuita!
+Asegúrate de que tu código esté bien optimizado y cumpla con las mejores prácticas de rendimiento. Puedes utilizar herramientas como PageSpeed Insights de Google para evaluar y obtener sugerencias específicas sobre cómo mejorar la velocidad de carga de tu sitio web.
 
 **Sitio :** https://pagespeed.web.dev/
 
