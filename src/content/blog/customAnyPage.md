@@ -4,7 +4,7 @@ description: "Cómo personalizar cualquier página web con los Overrides de DevT
 autor: "Jose Arjona"
 pubDate: "13 Aug 2023"
 heroImage: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-heroImageAlt: "OptimizarWebImg"
+heroImageAlt: "CustomPage"
 ---
 
 ¿Te gustaría cambiar el aspecto de cualquier página web a tu gusto? ¿Quieres probar diferentes diseños, colores, fuentes o imágenes sin tener que modificar el código fuente? Pues con los Overrides de DevTools puedes hacerlo fácilmente. Los Overrides de DevTools son una función de las herramientas de desarrollo de Chrome (o cualquier navegador con Chromium) que te permiten modificar el HTML, CSS y JavaScript de una página web y ver los cambios en tiempo real y mantenerlos. En este post te voy a enseñar cómo usar los Overrides de DevTools para personalizar cualquier página web.
@@ -35,6 +35,6 @@ Puede que modifiques demasiado y requieras reiniciar a los valores predeterminad
 
 Si al recargar o salirte de la página no ves tus estilos, abre las devtools otra vez, estos estilos deberían cargar.
 
-## Conlusión
+## Conclusión
 
 En conclusión, los Overrides de DevTools son una herramienta muy útil para personalizar el aspecto de las páginas web. Con esta herramienta, puedes hacer que las páginas web sean más fáciles de leer y más agradables a la vista. También puedes usar los Overrides de DevTools para probar diferentes diseños, colores, fuentes o imágenes sin tener que modificar el código fuente. Esto te permite experimentar con diferentes opciones y ver cómo se vería la página web con diferentes configuraciones.
