@@ -1,4 +1,3 @@
-
 :root {
 	--accent: #3eb954;
 	--accent-dark: #968a58;
@@ -10,7 +9,7 @@
 	--gray-dark: 22, 27, 34;
 	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
 	--box-shadow: rgba(11, 245, 31, 0.15) 0px 5px 15px 0px;
-	--bg-image: url('./bg.png'), lightgray 50% / cover no-repeat;
+	--bg-image: url('../assetsBlog/bg.png'), lightgray 50% / cover no-repeat;
 }
 
 /* Para navegadores WebKit como Chrome y Safari */
