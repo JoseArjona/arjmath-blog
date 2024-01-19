@@ -11,8 +11,9 @@ import "@fontsource/dm-sans/600.css";
 import Search from "../../components/Search.astro";
 import BackToUp from '../../components/BackToUp.astro'
 import { ViewTransitions } from "astro:transitions";
+
 const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() 
 );
 ---
 
