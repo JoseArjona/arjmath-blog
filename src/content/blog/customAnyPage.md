@@ -3,7 +3,7 @@ title: "Personaliza cualquier web con las DevTools"
 description: "Cómo personalizar cualquier página web con los Overrides de DevTools."
 autor: "Jose Arjona"
 pubDate: "13 Aug 2023"
-heroImage: "https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+heroImage: "https://images.pexels.com/photos/114907/pexels-photo-114907.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 heroImageAlt: "CustomPage"
 ---
 
@@ -18,8 +18,8 @@ heroImageAlt: "CustomPage"
 1. Primero,abre la página web que quieres personalizar en Chrome.
 2. Abre las herramientas de desarrollo de Chrome haciendo clic en el botón "Más herramientas" y luego seleccionando "Herramientas para desarrolladores" o presiona `f12`.
 3. En la ventana de herramientas de desarrollo, haz clic en la pestaña "Fuentes" (Sources).
-4. Después aparecerán subpestañas. Selecciona la que dice "Invalidaciones" (Overrides). _Si la opición no te sale presiona el simbolo '>>' en la sub pestaña._ ![Imagen Pestañas DevTools](../../assetsBlog/dvtools.png)
-5. La primera vez te pedirá que subas una carpeta, así que crea una carpeta en tu dispositivo y súbela.
+4. Después aparecerán subpestañas. Selecciona la que dice "Invalidaciones" (Overrides). _Si la opción no te sale presiona el símbolo '>>' en la sub pestaña._ ![Imagen Pestañas DevTools](../../assetsBlog/dvtools.png)
+5. La primera vez te pedirá que subas una carpeta, así que crea una carpeta en tu dispositivo y posteriormente sube la carpeta.
 6. Luego, activa la [x] casilla de Habilitar reemplazos locales.
 7. Ahora puedes ir a la subpestaña de "Página" y modificar lo que deseas o ir a la pestaña "Elementos".
 8. Las cosas que modifiques tendrán un círculo morado y se guardarán en la carpeta de Overrides o como la hayas nombrado.
