@@ -9,11 +9,11 @@ import "@fontsource/dm-serif-display";
 import "@fontsource/dm-sans/400.css";
 import "@fontsource/dm-sans/600.css";
 import Search from "../../components/Search.astro";
-import BackToUp from '../../components/BackToUp.astro'
+import BackToUp from "../../components/BackToUp.astro";
 import { ViewTransitions } from "astro:transitions";
 
 const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf() 
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
 
@@ -25,14 +25,14 @@ const posts = (await getCollection("blog")).sort(
     <style>
       main {
         display: flex;
-        width: 980px;
+        width: 1000px;
         flex-direction: column;
         justify-content: center;
       }
       ul {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center
+        justify-items: center;
         gap: 2rem;
         list-style-type: none;
         margin: 0;
@@ -50,6 +50,7 @@ const posts = (await getCollection("blog")).sort(
       }
       ul li a {
         width: 100%;
+        height: 300px;
         border: 1px solid #0000003f;
         backdrop-filter: blur(1px);
         border-radius: 15px;
@@ -69,25 +70,18 @@ const posts = (await getCollection("blog")).sort(
         text-decoration: none;
         transition: 0.2s ease;
       }
-      /*      ul li:first-child {
-        width: 100%;
-        margin-bottom: 1rem;
-        text-align: center;
-      }
-      ul li:first-child img {
-        width: 100%;
-      }
-      ul li:first-child .title {
-        font-size: 2.369rem;
-      } */
-      ul li img {
+
+      ul li a img {
         margin-bottom: 0.5rem;
         border-radius: 12px;
+        max-height: 180px;
+        object-fit: cover;
       }
       .title {
-        margin: 0;
+        text-wrap: balance;
         color: var(--secondary);
         line-height: 1;
+        max-height: 4em;
       }
       .date {
         margin: 0;
@@ -118,17 +112,16 @@ const posts = (await getCollection("blog")).sort(
           max-width: 320px;
           margin: auto;
         }
-       
       }
     </style>
   </head>
   <body>
     <Header />
     <main>
-      <section >
+      <section>
         <header>
           <h1 style="text-align: center;" transition:animate="initial">Post</h1>
-          <Search/>
+          <Search />
         </header>
         <ul id="posts">
           {
@@ -137,9 +130,9 @@ const posts = (await getCollection("blog")).sort(
                 <a href={`/blog/${post.slug}/`}>
                   <img
                     width={720}
-                    height={360}
+                    height={180}
                     src={post.data.heroImage}
-                    alt=""
+                    alt={post.data.heroImageAlt}
                   />
                   <h4 class="title">{post.data.title}</h4>
                   <p class="date">
@@ -152,8 +145,8 @@ const posts = (await getCollection("blog")).sort(
         </ul>
       </section>
     </main>
-    
-    <BackToUp/>
+
+    <BackToUp />
     <Footer />
   </body>
 </html>

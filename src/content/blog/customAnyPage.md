@@ -1,5 +1,5 @@
 ---
-title: "Personaliza cualquier página web con las DevTools"
+title: "Personaliza cualquier web con las DevTools"
 description: "Cómo personalizar cualquier página web con los Overrides de DevTools."
 autor: "Jose Arjona"
 pubDate: "13 Aug 2023"
