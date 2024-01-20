@@ -128,5 +128,38 @@ const { title, description, pubDate, updatedDate, heroImage, heroImageAlt } =
         justify-content: center;
       }
     </style>
+    <script is:inline>
+      function enableCopy(
+        selector = "pre",
+        childSelector = "code",
+        btnText = "📋",
+        btnTextSuccess = "Copied✅",
+        activeClass = "copy"
+      ) {
+        document
+          .querySelectorAll(`${selector}:not(.${activeClass})`)
+          .forEach((node) => {
+            // create a "copy" button
+            let copyBtn = document.createElement("button");
+            copyBtn.innerText = btnText;
+            // activeClass acts as flag so we don't add another copy button by  mistake
+            copyBtn.classList.add(activeClass);
+            node.appendChild(copyBtn);
+            copyBtn.addEventListener("click", async () => {
+              // get the code to copy
+              let code = node.querySelector(childSelector).innerText;
+              // copy to clipboard
+              await navigator.clipboard.writeText(code);
+              // change button text
+              copyBtn.innerText = btnTextSuccess;
+              // reset button text after 1 second
+              setTimeout(() => {
+                copyBtn.innerText = btnText;
+              }, 1000);
+            });
+          });
+      }
+      enableCopy();
+    </script>
   </body>
 </html>
